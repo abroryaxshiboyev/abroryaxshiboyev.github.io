@@ -3,353 +3,242 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Abror Yaxshiboyev — Laravel backend va full-stack developer. Production tizimlar, integratsiyalar va Telegram avtomatizatsiyasi."
-    />
+    <meta name="description" content="Abror Yaxshiboyev — PHP/Laravel backend dasturchi. REST API, PostgreSQL, Redis, queue, real-time integratsiyalar va production deploy tajribasi." />
     <meta name="theme-color" content="#07110f" />
-    <link
-      rel="icon"
-      type="image/svg+xml"
-      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2307110f'/%3E%3Cpath d='M16 46 29 17h7l12 29h-8l-2.4-6H26.8l-2.5 6Zm13.3-13h5.9l-2.9-7.7Z' fill='%23b9ff66'/%3E%3C/svg%3E"
-    />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2307110f'/%3E%3Cpath d='M16 46 29 17h7l12 29h-8l-2.4-6H26.8l-2.5 6Zm13.3-13h5.9l-2.9-7.7Z' fill='%23b9ff66'/%3E%3C/svg%3E" />
     <link rel="stylesheet" href="./styles.css" />
-    <title>Abror Yaxshiboyev — Backend & Full-stack Developer</title>
+    <title>Abror Yaxshiboyev — PHP/Laravel Backend Developer</title>
   </head>
   <body>
-    <a class="skip-link" href="#projects">Loyihalarga o‘tish</a>
+    <a class="skip-link" href="#featured">Tanlangan loyihalarga o‘tish</a>
+
     <header class="site-header">
       <a class="brand" href="#top" aria-label="Bosh sahifa">
         <span class="brand-mark">AY</span>
-        <span>Abror Yaxshiboyev</span>
+        <span class="brand-copy"><strong>Abror Yaxshiboyev</strong><small>Backend engineer</small></span>
       </a>
       <nav aria-label="Asosiy navigatsiya">
-        <a href="#experience">Ish tajribasi</a>
-        <a href="#projects">Loyihalar</a>
-        <a href="#process">Ish usuli</a>
-        <a href="https://github.com/abroryaxshiboyev" target="_blank" rel="noreferrer">GitHub ↗</a>
+        <a href="#featured">Case studies</a><a href="#all-projects">Loyihalar</a><a href="#experience">Tajriba</a><a href="#contact">Aloqa</a>
       </nav>
+      <a class="header-cta" href="https://github.com/abroryaxshiboyev" target="_blank" rel="noreferrer">GitHub <span>↗</span></a>
     </header>
 
     <main id="top">
       <section class="hero" aria-labelledby="hero-title">
         <div class="hero-copy">
-          <p class="eyebrow"><span></span> Backend · Full-stack · Laravel</p>
-          <h1 id="hero-title">G‘oyani ishlaydigan<br /><em>production tizimga</em> aylantiraman.</h1>
-          <p class="hero-lead">
-            Laravel’da API, admin panel va biznes jarayonlari uchun backendlar quraman.
-            Dastlabki loyihalarimni qo‘lda yozganman; keyingi ishlarimda AI’dan foydalanaman,
-            lekin kodni tekshirish, integratsiya, test va deploy uchun o‘zim javob beraman.
-          </p>
+          <div class="status-pill"><span></span> Yangi imkoniyatlarga ochiq</div>
+          <p class="eyebrow">PHP · Laravel · Production systems</p>
+          <h1 id="hero-title">Ko‘rinmaydigan qismni <em>ishonchli ishlataman.</em></h1>
+          <p class="hero-lead">Mobil va web mahsulotlar uchun REST API, biznes mantiqi, ma’lumotlar bazasi, queue va real-time integratsiyalar quraman — serverdan productiongacha.</p>
           <div class="hero-actions">
-            <a class="button button-primary" href="#projects">Tanlangan ishlar</a>
-            <a class="button button-ghost" href="https://github.com/abroryaxshiboyev" target="_blank" rel="noreferrer">GitHub profil</a>
+            <a class="button button-primary" href="#featured">Ishlarni ko‘rish <span>↓</span></a>
+            <a class="button button-secondary" href="mailto:abroryaxshiboyev2002@gmail.com">Bog‘lanish</a>
+          </div>
+          <div class="identity-line">
+            <img src="https://avatars.githubusercontent.com/u/110038864?v=4" alt="Abror Yaxshiboyev" />
+            <div><strong>Abror Yaxshiboyev</strong><span>Xorazm, O‘zbekiston · 3+ yil tajriba</span></div>
           </div>
         </div>
 
-        <aside class="profile-card" aria-label="Qisqa profil">
-          <div class="profile-topline">
-            <img src="https://avatars.githubusercontent.com/u/110038864?v=4" alt="Abror Yaxshiboyev GitHub avatari" />
-            <span>Amaliy tajriba</span>
-          </div>
-          <div class="profile-role">Laravel backend engineer</div>
-          <p>Xorazm, O‘zbekiston</p>
-          <div class="availability"><span></span> Yangi imkoniyatlarga ochiq</div>
-          <div class="profile-stack" aria-label="Asosiy texnologiyalar">
-            <span>PHP</span><span>Laravel</span><span>PostgreSQL</span><span>Redis</span><span>React</span>
+        <aside class="system-console" aria-label="Backend arxitektura ko‘rinishi">
+          <div class="console-head"><div><i></i><i></i><i></i></div><span>production-system.architecture</span><b><span></span> LIVE</b></div>
+          <div class="console-body">
+            <div class="console-label">REQUEST FLOW</div>
+            <div class="architecture-flow">
+              <div class="arch-node arch-client"><small>CLIENTS</small><strong>Mobile · Web</strong><span>JSON requests</span></div>
+              <div class="flow-line"><i></i><span>REST API</span></div>
+              <div class="arch-node arch-core"><small>CORE</small><strong>Laravel API</strong><span>Auth · Business logic</span></div>
+              <div class="flow-split"><i></i><i></i><i></i></div>
+              <div class="arch-services">
+                <div><small>DATA</small><strong>PostgreSQL</strong><span>Models · Relations</span></div>
+                <div><small>ASYNC</small><strong>Redis + Queue</strong><span>Jobs · Streams</span></div>
+                <div><small>OPS</small><strong>Nginx + Ubuntu</strong><span>Deploy · Monitor</span></div>
+              </div>
+            </div>
+            <div class="console-log"><span>API</span> request flow <b>READY</b></div>
           </div>
         </aside>
       </section>
 
-      <section class="proof-strip" aria-label="GitHub va tajriba statistikasi">
-        <article><strong>45</strong><span>shaxsiy repo</span></article>
-        <article><strong>14</strong><span>asosiy loyiha</span></article>
-        <article><strong>3</strong><span>jamoa / kompaniya</span></article>
-        <article><strong>3+</strong><span>yil backend tajribasi</span></article>
+      <section class="proof-strip" aria-label="Tajriba statistikasi">
+        <article><span class="stat-icon">01</span><strong>14</strong><p>Asosiy loyiha</p></article>
+        <article><span class="stat-icon">02</span><strong>3</strong><p>Kompaniya</p></article>
+        <article><span class="stat-icon">03</span><strong>3+</strong><p>Yil backend tajribasi</p></article>
+        <article><span class="stat-icon">04</span><strong>45</strong><p>Shaxsiy repository</p></article>
       </section>
 
-      <section class="career section" id="experience" aria-labelledby="career-title">
+      <section class="section featured" id="featured" aria-labelledby="featured-title">
         <div class="section-heading">
-          <div>
-            <p class="eyebrow">Ish tajribasi</p>
-            <h2 id="career-title">Backend’dan productiongacha.</h2>
-          </div>
-          <p>REST API va ma’lumotlar bazasidan boshlab Ubuntu serverlaridagi deploy va production diagnostikasigacha ishlaganman.</p>
+          <div><p class="eyebrow">Tanlangan case studies</p><h2 id="featured-title">Backend faqat kod emas.<br /><em>Ishlaydigan jarayon.</em></h2></div>
+          <p>Eng kuchli loyihalarim — vazifa, arxitektura, biznes mantiqi va production mas’uliyati bilan.</p>
         </div>
 
-        <div class="career-list">
-          <article class="career-item">
-            <div class="career-meta">
-              <span class="career-index">01</span>
-              <div>
-                <h3>Mega Soft</h3>
-                <p>Urganch · Sentabr 2024 — hozir</p>
+        <div class="case-grid">
+          <article class="case-card">
+            <div class="case-visual property-visual" aria-hidden="true">
+              <div class="visual-top"><span>REAL ESTATE API</span><b>Laravel</b></div>
+              <div class="property-window">
+                <div class="property-list">
+                  <div class="property-item active"><i></i><span><b>Uy-joy e’loni</b><small>Sotuv · Nukus</small></span><em>→</em></div>
+                  <div class="property-item"><i></i><span><b>Ijara obyektlari</b><small>Filter · Search</small></span><em>→</em></div>
+                  <div class="property-item"><i></i><span><b>Egasi bilan aloqa</b><small>Request flow</small></span><em>→</em></div>
+                </div>
+                <div class="property-map"><span class="map-road road-one"></span><span class="map-road road-two"></span><i class="pin pin-one"></i><i class="pin pin-two"></i><i class="pin pin-three"></i><b>API</b></div>
               </div>
             </div>
-            <div class="career-content">
-              <div class="career-role"><span></span> Backend dasturchi · PHP / Laravel</div>
-              <p>Commercial mobil va web loyihalarning backend qismini ishlab chiqish, qo‘llab-quvvatlash va productionga chiqarish.</p>
-              <ul>
-                <li>REST API, ma’lumotlar bazasi strukturasi va murakkab biznes mantiqini loyihalash.</li>
-                <li>Shaharlararo qatnov: haydovchi e’lonlari, joy band qilish, yo‘lovchi arizalari, safar statuslari va haydovchi verifikatsiyasi.</li>
-                <li>Qurilmalarni boshqarish va monitoring: queue, background job, Socket.IO va Redis Streams.</li>
-                <li>To‘lov va tranzaksiya logikasi; PostgreSQL/MySQL so‘rovlarini optimallashtirish.</li>
-                <li>Ubuntu serverlarida Nginx, PHP-FPM, Redis, Supervisor bilan deploy va production xatolarini diagnostika qilish.</li>
-                <li>Mega Go xizmatlar bo‘limi va Telegram guruh a’zoligini tekshiruvchi bot.</li>
-              </ul>
-              <div class="stack-list"><span>PHP</span><span>Laravel</span><span>PostgreSQL</span><span>Redis</span><span>Queue</span><span>Socket.IO</span><span>Nginx</span><span>Ubuntu</span></div>
+            <div class="case-body">
+              <div class="case-meta"><span>AralHub</span><span class="role-badge">To‘liq backend</span></div>
+              <h3>Qaruy.uz</h3>
+              <p>Uy-joy ijarasi va oldi-sotdisi uchun e’lonlar, ma’lumotlar bazasi va server biznes mantiqiga ega platforma.</p>
+              <ul class="feature-list"><li>E’lon va obyekt ma’lumotlari</li><li>Ijara va savdo jarayonlari</li><li>REST API va database design</li></ul>
+              <div class="case-foot"><div><span>Laravel</span><span>REST API</span><span>Database</span></div><b class="manual">Qo‘lda</b></div>
             </div>
           </article>
 
-          <article class="career-item">
-            <div class="career-meta">
-              <span class="career-index">02</span>
-              <div>
-                <h3>AralHub</h3>
-                <p>Nukus · Fevral 2024 — Iyul 2024</p>
+          <article class="case-card">
+            <div class="case-visual face-visual" aria-hidden="true">
+              <div class="visual-top"><span>ATTENDANCE ENGINE</span><b>Face ID</b></div>
+              <div class="face-dashboard">
+                <div class="scanner-box"><span class="corner c1"></span><span class="corner c2"></span><span class="corner c3"></span><span class="corner c4"></span><div class="face-shape"><i></i><b></b></div><div class="scan-line"></div><small>FACE MATCHED</small></div>
+                <div class="attendance-list"><div><i class="ok"></i><span><b>Kelgan</b><small>Davomat</small></span><em>Faol</em></div><div><i class="warn"></i><span><b>Kelmagan</b><small>Hisobot</small></span><em>Report</em></div><div><i class="unknown"></i><span><b>Noma’lum yuz</b><small>Nazorat</small></span><em>Review</em></div></div>
               </div>
             </div>
-            <div class="career-content">
-              <div class="career-role"><span></span> Backend dasturchi · PHP / Laravel</div>
-              <p>Web loyihalar uchun backend logika, REST API, ma’lumotlar bazasi va boshqa servislar bilan integratsiya.</p>
-              <ul>
-                <li>Qaruy.uz — uy-joy ijarasi va oldi-sotdisi platformasining to‘liq backend’i, API va server biznes logikasi.</li>
-                <li>Bog‘chalarda kamera orqali davomat va hududdagi begona bolalarni aniqlash tizimi.</li>
-                <li>Maktablarda kamera ma’lumotlari asosidagi davomat nazorati.</li>
-              </ul>
-              <div class="stack-list"><span>PHP</span><span>Laravel</span><span>MySQL</span><span>PostgreSQL</span><span>REST API</span><span>Git</span></div>
+            <div class="case-body">
+              <div class="case-meta"><span>AralHub</span><span class="role-badge">To‘liq backend</span></div>
+              <h3>Face ID Davomat</h3>
+              <p>Maktab va bog‘cha uchun kamera ma’lumotlari asosida davomat, statistika va hisobotlarni boshqaruvchi backendlar.</p>
+              <ul class="feature-list"><li>Kunlik va oylik hisobotlar</li><li>Noma’lum yuzlarni nazorat qilish</li><li>Rollar va Excel eksporti</li></ul>
+              <div class="case-foot"><div><span>Laravel</span><span>Reports</span><span>Face ID</span></div><b class="manual">Qo‘lda</b></div>
             </div>
           </article>
 
-          <article class="career-item">
-            <div class="career-meta">
-              <span class="career-index">03</span>
-              <div>
-                <h3>Karsoft IT Solutions</h3>
-                <p>Nukus · Yanvar 2023 — Iyun 2023</p>
+          <article class="case-card">
+            <div class="case-visual services-visual" aria-hidden="true">
+              <div class="visual-top"><span>ORDER WORKFLOW</span><b>Multi-role</b></div>
+              <div class="workflow-board">
+                <div class="workflow-column"><small>YANGI</small><div class="ticket"><span>Yangi buyurtma</span><b>Customer</b></div><div class="ticket faint"><span>Keyingi buyurtma</span><b>Customer</b></div></div>
+                <div class="workflow-arrow">→</div>
+                <div class="workflow-column"><small>JARAYONDA</small><div class="ticket highlighted"><span>Xizmat bajarilmoqda</span><b>Worker</b></div></div>
+                <div class="workflow-arrow">→</div>
+                <div class="workflow-column"><small>TAYYOR</small><div class="ticket done"><span>Status tarixi</span><b>Completed</b></div></div>
               </div>
             </div>
-            <div class="career-content">
-              <div class="career-role"><span></span> Backend dasturchi · PHP / Laravel</div>
-              <p>Web servislar va Telegram botlar uchun backend ishlab chiqish.</p>
-              <ul>
-                <li>Qoraqalpoq tilining elektron izohli lug‘ati backend’i.</li>
-                <li>Bookie audio kitob platformasi va uning asosiy API oqimlari.</li>
-                <li>Jamoaviy development va code review orqali amaliy tajriba.</li>
-              </ul>
-              <div class="stack-list"><span>PHP</span><span>Laravel</span><span>REST API</span><span>Database</span><span>Telegram Bot</span><span>Git</span></div>
+            <div class="case-body">
+              <div class="case-meta"><span>MegaSoft</span><span class="role-badge">To‘liq backend</span></div>
+              <h3>MegaSoft Services</h3>
+              <p>Tashkilotlar, xizmatlar va buyurtmalarni admin, customer, member hamda worker rollari orasida boshqaruvchi tizim.</p>
+              <ul class="feature-list"><li>Role-based ish oqimlari</li><li>Order status tarixi</li><li>Ko‘p tilli ma’lumotlar</li></ul>
+              <div class="case-foot"><div><span>Laravel 11</span><span>Laratrust</span><span>i18n</span></div><b class="manual">Qo‘lda</b></div>
+            </div>
+          </article>
+
+          <article class="case-card">
+            <div class="case-visual device-visual" aria-hidden="true">
+              <div class="visual-top"><span>DEVICE MONITORING</span><b><i></i> Online</b></div>
+              <div class="monitor-panel">
+                <div class="device-metrics"><div><small>QURILMALAR</small><strong>Faol</strong><span>holat nazorati</span></div><div><small>QUEUE</small><strong>Ready</strong><span>background jobs</span></div><div><small>OQIM</small><strong>Live</strong><span>real-time</span></div></div>
+                <div class="chart-wrap"><svg viewBox="0 0 560 120" preserveAspectRatio="none"><defs><linearGradient id="chartFill" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#73f2cf" stop-opacity=".35"/><stop offset="1" stop-color="#73f2cf" stop-opacity="0"/></linearGradient></defs><path class="chart-area" d="M0 100 L0 80 L45 74 L88 82 L132 51 L176 58 L220 34 L264 47 L310 24 L355 39 L400 29 L446 35 L492 14 L540 22 L560 17 L560 120 L0 120 Z"/><path class="chart-line" d="M0 80 L45 74 L88 82 L132 51 L176 58 L220 34 L264 47 L310 24 L355 39 L400 29 L446 35 L492 14 L540 22 L560 17"/></svg><span>Real-time holat oqimi</span></div>
+              </div>
+            </div>
+            <div class="case-body">
+              <div class="case-meta"><span>MegaSoft</span><span class="role-badge">To‘liq backend</span></div>
+              <h3>Water Device</h3>
+              <p>Suv qurilmalarini boshqarish, holatini monitoring qilish va background jarayonlarni yuritish uchun production backend.</p>
+              <ul class="feature-list"><li>Qurilmalar va holat monitoringi</li><li>Queue va background jobs</li><li>Production deploy</li></ul>
+              <div class="case-foot"><div><span>Laravel</span><span>Queue</span><span>Monitoring</span></div><b class="manual">Qo‘lda</b></div>
             </div>
           </article>
         </div>
       </section>
 
-      <section class="projects section" id="projects" aria-labelledby="projects-title">
-        <div class="section-heading">
-          <div>
-            <p class="eyebrow">Tanlangan ishlar</p>
-            <h2 id="projects-title">Kod emas, mas’uliyat ko‘lami.</h2>
-          </div>
-          <p>Har bir loyihada rol, loyiha holati va ishlab chiqish usuli ochiq ko‘rsatilgan.</p>
+      <section class="section all-projects" id="all-projects" aria-labelledby="all-projects-title">
+        <div class="section-heading compact-heading">
+          <div><p class="eyebrow">14 ta loyiha · 3 ta kompaniya</p><h2 id="all-projects-title">Rolim aniq ko‘rsatilgan.</h2></div>
+          <p>“To‘liq backend” faqat backendni o‘zim olib borgan loyihalarda yozilgan. Qolganlarida ishtirokchi sifatidagi hissam ko‘rsatilgan.</p>
         </div>
-
-        <div class="project-grid">
-          <article class="project-card project-card-featured">
-            <div class="project-meta"><span>01 · KarSoft</span><span class="project-kind">Backendni to‘liq ishlab chiqdim</span></div>
-            <h3>tusindirmesozlik.uz</h3>
-            <p class="project-summary">Lug‘at, so‘z qidiruvi va Kirill–lotin o‘girish imkoniyatlariga ega backend API.</p>
-            <ul>
-              <li>So‘z, kategoriya, harf va kun so‘zi API’lari</li>
-              <li>Kirilldan lotinga o‘girish va kengaytirilgan qidiruv</li>
-              <li>Sanctum autentifikatsiyasi, rol va permission boshqaruvi</li>
-            </ul>
-            <div class="project-foot"><span>Laravel · REST API · Sanctum</span><span class="method method-manual">Qo‘lda ishlab chiqilgan</span></div>
-          </article>
-
-          <article class="project-card">
-            <div class="project-meta"><span>02 · KarSoft</span><span class="project-kind">Backend loyiha</span></div>
-            <h3>Audio Kitob Platformasi</h3>
-            <p class="project-summary">Audio kitoblarni topish, tinglash va buyurtma qilish uchun ishlab chiqilgan, ammo productionga chiqmagan loyiha.</p>
-            <ul>
-              <li>Kitob, muallif, dublyajchi, audio va kategoriya katalogi</li>
-              <li>Favorite, savat, order, review va recommendation oqimlari</li>
-              <li>Admin permissionlari va Laravel Scout qidiruvi</li>
-            </ul>
-            <div class="project-foot"><span>Laravel · API · Search</span><span class="method method-manual">Qo‘lda · prototip</span></div>
-          </article>
-
-          <article class="project-card">
-            <div class="project-meta"><span>03 · AralHub</span><span class="project-kind">Backendni to‘liq ishlab chiqdim</span></div>
-            <h3>Maktab Face ID Davomati</h3>
-            <p class="project-summary">Face ID orqali o‘quvchilar davomatini aniqlash uchun maktab boshqaruv backend’i.</p>
-            <ul>
-              <li>Maktab, guruh va o‘quvchi ma’lumotlari</li>
-              <li>Face ID tizimi bilan ishlashga tayyor API qatlam</li>
-              <li>CRUD va davomat jarayonlari uchun ma’lumotlar modeli</li>
-            </ul>
-            <div class="project-foot"><span>Laravel · REST API · Face ID</span><span class="method method-manual">Qo‘lda ishlab chiqilgan</span></div>
-          </article>
-
-          <article class="project-card">
-            <div class="project-meta"><span>04 · AralHub</span><span class="project-kind">Backendni to‘liq ishlab chiqdim</span></div>
-            <h3>Bog‘cha Face ID Davomati</h3>
-            <p class="project-summary">Bolalarning kelish-ketishini aniqlash, nazorat qilish va hisobot olish uchun backend.</p>
-            <ul>
-              <li>Bog‘cha, guruh, bola va tasvirlar boshqaruvi</li>
-              <li>Kunlik/oylik hisobot va kelmaganlar statistikasi</li>
-              <li>Noma’lum yuzlar, rollar va Excel eksporti</li>
-            </ul>
-            <div class="project-foot"><span>Laravel · Sanctum · Reports</span><span class="method method-manual">Qo‘lda ishlab chiqilgan</span></div>
-          </article>
-
-          <article class="project-card">
-            <div class="project-meta"><span>05 · AralHub</span><span class="project-kind">Backendni to‘liq ishlab chiqdim</span></div>
-            <h3>Qaruy.uz</h3>
-            <p class="project-summary">Uy-joylarni ijaraga berish va oldi-sotdi qilish jarayonlari uchun backend hamda REST API.</p>
-            <ul>
-              <li>Uy-joy e’lonlari va ko‘chmas mulk ma’lumotlarini boshqarish</li>
-              <li>Ijara va oldi-sotdi jarayonlari uchun server biznes logikasi</li>
-              <li>Ma’lumotlar bazasi strukturasi va REST API qatlamini ishlab chiqish</li>
-            </ul>
-            <div class="project-foot"><span>Laravel · REST API · Database</span><span class="method method-manual">Qo‘lda ishlab chiqilgan</span></div>
-          </article>
-
-          <article class="project-card">
-            <div class="project-meta"><span>06 · MegaSoft</span><span class="project-kind">Backendni to‘liq ishlab chiqdim</span></div>
-            <h3>MegaSoft Services</h3>
-            <p class="project-summary">Tashkilotlar xizmat ko‘rsatishi va buyurtmalarni xodimlar orasida boshqarishi uchun backend.</p>
-            <ul>
-              <li>Admin, customer, member va worker rollari</li>
-              <li>Kategoriya, xizmat, tashkilot va buyurtma oqimlari</li>
-              <li>Order status tarixi va ko‘p tilli ma’lumotlar</li>
-            </ul>
-            <div class="project-foot"><span>Laravel 11 · Laratrust · i18n</span><span class="method method-manual">Qo‘lda ishlab chiqilgan</span></div>
-          </article>
-
-          <article class="project-card">
-            <div class="project-meta"><span>07 · MegaSoft</span><span class="project-kind">Backendni to‘liq ishlab chiqdim</span></div>
-            <h3>Water Device Backend</h3>
-            <p class="project-summary">Suv qurilmalarini boshqarish va ularning holatini monitoring qilish uchun backendni to‘liq ishlab chiqdim.</p>
-            <ul>
-              <li>Backend arxitekturasi va biznes qoidalarini shakllantirish</li>
-              <li>Qurilmalar, holat monitoringi va ma’lumotlar oqimini boshqarish</li>
-              <li>Production deploy va ishlashiga yakuniy javobgarlik</li>
-            </ul>
-            <div class="project-foot"><span>Laravel · Queue · Monitoring</span><span class="method method-manual">Qo‘lda ishlab chiqilgan</span></div>
-          </article>
-        </div>
-      </section>
-
-      <section class="megasoft section" id="work" aria-labelledby="work-title">
-        <div class="section-heading">
-          <div>
-            <p class="eyebrow">Commercial experience</p>
-            <h2 id="work-title">Loyihalar va haqiqiy rolim.</h2>
-          </div>
-          <p>“To‘liq backend” faqat backendni o‘zim olib borgan loyihalarda ishlatilgan. Qolganlarida ishtirokchi sifatidagi hissam ko‘rsatilgan.</p>
-        </div>
-
-        <section class="company-block" aria-labelledby="karsoft-title">
-          <div class="company-header"><span>01</span><h3 id="karsoft-title">KarSoft</h3><p>Backend development</p></div>
-          <div class="work-table" role="table" aria-label="KarSoft loyihalari">
-            <div class="work-row work-head" role="row"><span>Loyiha</span><span>Rol</span><span>Usul</span><span>Natija</span></div>
-            <div class="work-row" role="row"><strong>tusindirmesozlik.uz</strong><span>To‘liq backend</span><span class="method method-manual">Qo‘lda</span><p>Lug‘at API’si productionga chiqarilgan</p></div>
-            <div class="work-row" role="row"><strong>Audio Kitoblar</strong><span>Backend</span><span class="method method-manual">Qo‘lda</span><p>Ishchi prototip; productionga chiqmagan</p></div>
-          </div>
-        </section>
-
-        <section class="company-block" aria-labelledby="aralhub-title">
-          <div class="company-header"><span>02</span><h3 id="aralhub-title">AralHub</h3><p>Web platforms · Face ID systems</p></div>
-          <div class="work-table" role="table" aria-label="AralHub loyihalari">
-            <div class="work-row work-head" role="row"><span>Loyiha</span><span>Rol</span><span>Usul</span><span>Natija</span></div>
-            <div class="work-row" role="row"><strong>Qaruy.uz</strong><span>To‘liq backend</span><span class="method method-manual">Qo‘lda</span><p>Uy-joy ijarasi va oldi-sotdisi API’si</p></div>
-            <div class="work-row" role="row"><strong>Maktab Face ID</strong><span>To‘liq backend</span><span class="method method-manual">Qo‘lda</span><p>Maktab davomat backend’i</p></div>
-            <div class="work-row" role="row"><strong>Bog‘cha Face ID</strong><span>To‘liq backend</span><span class="method method-manual">Qo‘lda</span><p>Davomat, statistika va hisobot API’lari</p></div>
-          </div>
-        </section>
-
-        <section class="company-block" aria-labelledby="megasoft-title">
-          <div class="company-header"><span>03</span><h3 id="megasoft-title">MegaSoft</h3><p>Production systems</p></div>
-          <div class="work-table" role="table" aria-label="MegaSoft loyihalari">
-            <div class="work-row work-head" role="row"><span>Loyiha</span><span>Rol</span><span>Usul</span><span>Yo‘nalish</span></div>
-            <div class="work-row" role="row"><strong>MegaSoft Services</strong><span>To‘liq backend</span><span class="method method-manual">Qo‘lda</span><p>Xizmat va buyurtma boshqaruvi</p></div>
-            <div class="work-row" role="row"><strong>PosSystem</strong><span>Ishtirokchi</span><span class="method method-manual">Qo‘lda</span><p>POS tizimi backend vazifalari</p></div>
-            <div class="work-row" role="row"><strong>MegaCafe</strong><span>Ishtirokchi</span><span class="method method-manual">Qo‘lda</span><p>Cafe tizimidagi backend vazifalari</p></div>
-            <div class="work-row" role="row"><strong>MegaTaxi</strong><span>Ishtirokchi</span><span class="method method-manual">Qo‘lda</span><p>Taxi platformasidagi backend vazifalari</p></div>
-            <div class="work-row" role="row"><strong>Delivery Service</strong><span>Ishtirokchi</span><span class="method method-manual">Qo‘lda</span><p>Order va delivery backend vazifalari</p></div>
-            <div class="work-row" role="row"><strong>Water Device</strong><span>To‘liq backend</span><span class="method method-manual">Qo‘lda</span><p>Qurilma boshqaruvi, monitoring va production deploy</p></div>
-            <div class="work-row" role="row"><strong>Soliq App</strong><span>Ishtirokchi</span><span class="method method-manual">Qo‘lda</span><p>OFD, VAT va receipt oqimlari</p></div>
-            <div class="work-row" role="row"><strong>Amuzar Platform</strong><span>Backend / platforma</span><span class="method method-ai">AI yordamida</span><p>Buyurtma, Telegram va admin jarayonlari</p></div>
-            <div class="work-row" role="row"><strong>MegaLord App Backend</strong><span>Backend ishtiroki</span><span class="method method-ai">AI yordamida</span><p>Session, wallet va real-time jarayonlar</p></div>
-          </div>
-        </section>
-      </section>
-
-      <section class="experience section" id="process" aria-labelledby="process-title">
-        <p class="eyebrow">Ish usuli</p>
-        <h2 id="process-title">AI yordamchi. Javobgarlik esa menda.</h2>
-        <p class="process-intro">Loyihalarimning asosiy qismini qo‘lda ishlab chiqqanman. Amuzar Platform va MegaLord App Backend’da AI’dan ishlab chiqish tezligini oshirish uchun foydalandim; kod review, integratsiya, test va deploy uchun o‘zim javob berdim.</p>
-        <div class="experience-lines">
-          <div><span>01</span><strong>Talab va vazifani ajratish</strong><p>Biznes muammoni tushunib, modul va kichik texnik vazifalarga bo‘laman.</p></div>
-          <div><span>02</span><strong>AI bilan implementatsiya</strong><p>Prompt va kontekst orqali kod variantini olaman; uni tayyor natija deb qabul qilmayman.</p></div>
-          <div><span>03</span><strong>Review va integratsiya</strong><p>Diff, model, migration, xavfsizlik va mavjud tizim bilan mosligini tekshiraman.</p></div>
-          <div><span>04</span><strong>Test va deploy</strong><p>Xatolarni tuzataman, ish oqimini tekshiraman va productionga chiqaraman.</p></div>
-        </div>
-      </section>
-
-      <section class="profile-details section" aria-labelledby="profile-details-title">
-        <div class="section-heading">
-          <div>
-            <p class="eyebrow">Asos</p>
-            <h2 id="profile-details-title">Ta’lim va ko‘nikmalar.</h2>
-          </div>
-          <p>Matematik tayyorgarlikni backend arxitektura, ma’lumotlar va algoritmik fikrlash bilan birlashtiraman.</p>
-        </div>
-
-        <div class="details-grid">
-          <article class="education-card">
-            <span class="details-label">Ta’lim · 2024</span>
-            <h3>Qoraqalpoq davlat universiteti</h3>
-            <p>Bakalavr · Matematika, Amaliy matematika</p>
-          </article>
-          <article class="skills-card">
-            <div>
-              <span class="details-label">Backend</span>
-              <p>PHP · Laravel · MVC · REST API · JSON API · SOLID</p>
+        <div class="company-grid">
+          <article class="company-card">
+            <div class="company-title"><span>01</span><div><h3>KarSoft</h3><p>Backend development</p></div><b>2 loyiha</b></div>
+            <div class="compact-list">
+              <div><span class="project-symbol">TS</span><p><strong>tusindirmesozlik.uz</strong><small>Lug‘at, qidiruv, transliteratsiya va role API</small></p><em>To‘liq backend</em><b class="manual">Qo‘lda</b></div>
+              <div><span class="project-symbol">BK</span><p><strong>Audio Kitoblar</strong><small>Katalog, audio, savat, order va review</small></p><em>Backend · prototip</em><b class="manual">Qo‘lda</b></div>
             </div>
-            <div>
-              <span class="details-label">Data & Infrastructure</span>
-              <p>PostgreSQL · MySQL · SQL · Database Design · Redis · Docker</p>
+          </article>
+          <article class="company-card">
+            <div class="company-title"><span>02</span><div><h3>AralHub</h3><p>Web platforms · Face ID</p></div><b>3 loyiha</b></div>
+            <div class="compact-list">
+              <div><span class="project-symbol">QR</span><p><strong>Qaruy.uz</strong><small>Uy-joy ijarasi va oldi-sotdisi API</small></p><em>To‘liq backend</em><b class="manual">Qo‘lda</b></div>
+              <div><span class="project-symbol">MF</span><p><strong>Maktab Face ID</strong><small>O‘quvchilar davomat backend’i</small></p><em>To‘liq backend</em><b class="manual">Qo‘lda</b></div>
+              <div><span class="project-symbol">BF</span><p><strong>Bog‘cha Face ID</strong><small>Davomat, statistika va reports</small></p><em>To‘liq backend</em><b class="manual">Qo‘lda</b></div>
             </div>
-            <div>
-              <span class="details-label">Production</span>
-              <p>Laravel Queue · Nginx · Linux · Ubuntu Server · Supervisor · Git</p>
-            </div>
-            <div>
-              <span class="details-label">Til</span>
-              <p>O‘zbek tili · Ona tili</p>
+          </article>
+          <article class="company-card company-card-wide">
+            <div class="company-title"><span>03</span><div><h3>MegaSoft</h3><p>Production systems</p></div><b>9 loyiha</b></div>
+            <div class="compact-list compact-list-two">
+              <div><span class="project-symbol">MS</span><p><strong>MegaSoft Services</strong><small>Xizmat va order boshqaruvi</small></p><em>To‘liq backend</em><b class="manual">Qo‘lda</b></div>
+              <div><span class="project-symbol">PS</span><p><strong>PosSystem</strong><small>POS backend vazifalari</small></p><em>Ishtirokchi</em><b class="manual">Qo‘lda</b></div>
+              <div><span class="project-symbol">MC</span><p><strong>MegaCafe</strong><small>Cafe tizimidagi backend vazifalari</small></p><em>Ishtirokchi</em><b class="manual">Qo‘lda</b></div>
+              <div><span class="project-symbol">MT</span><p><strong>MegaTaxi</strong><small>Taxi platformasi backend vazifalari</small></p><em>Ishtirokchi</em><b class="manual">Qo‘lda</b></div>
+              <div><span class="project-symbol">DS</span><p><strong>Delivery Service</strong><small>Order va delivery oqimlari</small></p><em>Ishtirokchi</em><b class="manual">Qo‘lda</b></div>
+              <div><span class="project-symbol">WD</span><p><strong>Water Device</strong><small>Monitoring va production deploy</small></p><em>To‘liq backend</em><b class="manual">Qo‘lda</b></div>
+              <div><span class="project-symbol">SA</span><p><strong>Soliq App</strong><small>OFD, VAT va receipt oqimlari</small></p><em>Ishtirokchi</em><b class="manual">Qo‘lda</b></div>
+              <div><span class="project-symbol">AP</span><p><strong>Amuzar Platform</strong><small>Buyurtma, Telegram va admin</small></p><em>Backend / platforma</em><b class="ai">AI yordamida</b></div>
+              <div><span class="project-symbol">ML</span><p><strong>MegaLord App</strong><small>Session, wallet va real-time</small></p><em>Backend ishtiroki</em><b class="ai">AI yordamida</b></div>
             </div>
           </article>
         </div>
       </section>
 
-      <section class="contact section" aria-labelledby="contact-title">
-        <p class="eyebrow">Bog‘lanish</p>
-        <div>
-          <h2 id="contact-title">Real muammoni muhokama qilamiz.</h2>
-          <p>Kod namunalari va ochiq loyihalar GitHub profilimda. Private loyihalarda aynan qaysi qismini qo‘lda, qaysi qismini AI yordamida bajarganimni suhbatda ochiq tushuntira olaman.</p>
-          <div class="contact-links">
-            <a class="contact-link" href="mailto:abroryaxshiboyev2002@gmail.com"><span>Email</span><strong>abroryaxshiboyev2002@gmail.com</strong></a>
-            <a class="contact-link" href="https://t.me/Abror_Yaxshiboyev" target="_blank" rel="noreferrer"><span>Telegram</span><strong>@Abror_Yaxshiboyev ↗</strong></a>
-            <a class="contact-link" href="tel:+998949091215"><span>Telefon</span><strong>+998 94 909 12 15</strong></a>
-            <a class="contact-link" href="https://github.com/abroryaxshiboyev" target="_blank" rel="noreferrer"><span>GitHub</span><strong>abroryaxshiboyev ↗</strong></a>
-          </div>
+      <section class="section experience" id="experience" aria-labelledby="experience-title">
+        <div class="section-heading"><div><p class="eyebrow">Ish tajribasi</p><h2 id="experience-title">Koddan productiongacha.</h2></div><p>API va database’dan boshlab Ubuntu serveridagi deploy, monitoring va production diagnostikasigacha.</p></div>
+        <div class="experience-grid">
+          <article class="experience-card experience-main">
+            <div class="job-head"><span>2024 — hozir</span><b>01</b></div><h3>Mega Soft</h3><p class="job-location">Urganch · Backend dasturchi</p>
+            <div class="job-columns"><p>Commercial mobil va web mahsulotlarning backend qismini ishlab chiqish, integratsiya qilish va productionga chiqarish.</p><ul><li>REST API va murakkab biznes mantiqi</li><li>PostgreSQL/MySQL va query optimizatsiya</li><li>Redis, Queue, Supervisor va Socket.IO</li><li>To‘lov va tranzaksiya oqimlari</li><li>Nginx, PHP-FPM va Ubuntu deploy</li></ul></div>
+            <div class="tag-row"><span>Laravel</span><span>PostgreSQL</span><span>Redis</span><span>Queue</span><span>Ubuntu</span></div>
+          </article>
+          <article class="experience-card"><div class="job-head"><span>Fevral — Iyul 2024</span><b>02</b></div><h3>AralHub</h3><p class="job-location">Nukus · Backend dasturchi</p><p>Qaruy.uz hamda maktab va bog‘cha Face ID tizimlarining backend logikasi, API va ma’lumotlar bazasi.</p><div class="tag-row"><span>Laravel</span><span>REST API</span><span>MySQL</span><span>Reports</span></div></article>
+          <article class="experience-card"><div class="job-head"><span>Yanvar — Iyun 2023</span><b>03</b></div><h3>Karsoft IT Solutions</h3><p class="job-location">Nukus · Backend dasturchi</p><p>Izohli lug‘at, audio kitob platformasi va Telegram botlar uchun backend servislar.</p><div class="tag-row"><span>PHP</span><span>Laravel</span><span>Sanctum</span><span>Git</span></div></article>
+        </div>
+      </section>
+
+      <section class="section process" id="process" aria-labelledby="process-title">
+        <div class="process-copy"><p class="eyebrow">Ish usuli</p><h2 id="process-title">AI yordamchi.<br /><em>Javobgarlik menda.</em></h2><p>Loyihalarimning asosiy qismini qo‘lda ishlab chiqqanman. Faqat Amuzar Platform va MegaLord App Backend’da AI’dan tezlik uchun foydalandim.</p><div class="ratio"><strong>12</strong><span>qo‘lda ishlangan loyiha</span><i></i><strong>2</strong><span>AI yordamidagi loyiha</span></div></div>
+        <div class="process-steps">
+          <div><span>01</span><i>Talab</i><strong>Muammoni tushunaman</strong><p>Biznes vazifani modul va texnik topshiriqlarga ajrataman.</p></div>
+          <div><span>02</span><i>Implementatsiya</i><strong>Kodni ishlab chiqaman</strong><p>Qo‘lda yoki AI yordamida variant yarataman; natijani tayyor deb qabul qilmayman.</p></div>
+          <div><span>03</span><i>Review</i><strong>Integratsiyani tekshiraman</strong><p>Migration, xavfsizlik, mavjud tizim va ma’lumotlar oqimini ko‘rib chiqaman.</p></div>
+          <div><span>04</span><i>Delivery</i><strong>Test va deploy qilaman</strong><p>Xatolarni tuzataman va production ishlashiga yakuniy javob beraman.</p></div>
+        </div>
+      </section>
+
+      <section class="section foundation" aria-labelledby="foundation-title">
+        <div class="section-heading compact-heading"><div><p class="eyebrow">Texnologiya va asos</p><h2 id="foundation-title">Backend uchun kerakli qatlamlar.</h2></div><p>Matematik tayyorgarlikni tizimli fikrlash, ma’lumotlar va production tajribasi bilan birlashtiraman.</p></div>
+        <div class="foundation-grid">
+          <article class="education-card"><span>Ta’lim · 2024</span><div class="education-mark">∑</div><h3>Qoraqalpoq davlat universiteti</h3><p>Bakalavr · Matematika, Amaliy matematika</p></article>
+          <article class="skills-panel">
+            <div><span class="skill-icon">01</span><p><strong>Backend</strong><small>PHP · Laravel · MVC · REST API · SOLID</small></p></div>
+            <div><span class="skill-icon">02</span><p><strong>Data</strong><small>PostgreSQL · MySQL · Redis · SQL · Database Design</small></p></div>
+            <div><span class="skill-icon">03</span><p><strong>Async &amp; Real-time</strong><small>Laravel Queue · Redis Streams · Socket.IO · Supervisor</small></p></div>
+            <div><span class="skill-icon">04</span><p><strong>Production</strong><small>Linux · Ubuntu · Nginx · PHP-FPM · Docker · Git</small></p></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section contact" id="contact" aria-labelledby="contact-title">
+        <div class="contact-copy"><p class="eyebrow">Bog‘lanish</p><h2 id="contact-title">Birgalikda ishlaydigan tizim quramiz.</h2><p>Private loyihalarda aynan qaysi qismiga javob berganimni suhbatda ochiq tushuntira olaman.</p></div>
+        <div class="contact-grid">
+          <a href="mailto:abroryaxshiboyev2002@gmail.com"><span>Email</span><strong>abroryaxshiboyev2002@gmail.com</strong><i>↗</i></a>
+          <a href="https://t.me/Abror_Yaxshiboyev" target="_blank" rel="noreferrer"><span>Telegram</span><strong>@Abror_Yaxshiboyev</strong><i>↗</i></a>
+          <a href="tel:+998949091215"><span>Telefon</span><strong>+998 94 909 12 15</strong><i>↗</i></a>
+          <a href="https://github.com/abroryaxshiboyev" target="_blank" rel="noreferrer"><span>GitHub</span><strong>abroryaxshiboyev</strong><i>↗</i></a>
         </div>
       </section>
     </main>
 
     <footer>
-      <span>© 2026 Abror Yaxshiboyev</span>
-      <a href="https://github.com/abroryaxshiboyev" target="_blank" rel="noreferrer">github.com/abroryaxshiboyev ↗</a>
+      <a class="brand" href="#top"><span class="brand-mark">AY</span><span class="brand-copy"><strong>Abror Yaxshiboyev</strong><small>PHP / Laravel Backend</small></span></a>
+      <p>© 2026 · Xorazm, O‘zbekiston</p><a href="#top">Yuqoriga ↑</a>
     </footer>
   </body>
 </html>
